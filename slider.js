@@ -1,60 +1,4 @@
 function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCouter, wrapper, field}) {
-    // fetch('http://localhost:3000/menu')
-    // .then(data => data.json())
-    // .then(res => console.log(res));
-
-    //Slider 
-
-    // const slider = document.querySelector('.offer__slider');
-    // const counter = slider.querySelector('.offer__slider-counter');
-    // const sliderWrapper = slider.querySelector('.offer__slider-wrapper');
-    // const slideArr = sliderWrapper.querySelectorAll('.offer__slide');
-
-    // const hideSliders = () => {
-    //     slideArr.forEach(item => {
-    //         item.classList.add('hide');
-    //     });
-    // }
-    // hideSliders();
-    // const formanNum = (num) =>{
-    //     if(num < 10){
-    //         return `0${num}`;
-    //     }
-    // }
-    // let id = 0
-    // const showSlide = (id = 0) => {
-    //     hideSliders();
-    //     slideArr[id].classList.remove('hide');
-    //     slideArr[id].classList.add('show');
-    //     counter.innerHTML = `
-    //             <div class="offer__slider-prev">
-    //                 <img src="icons/left.svg" alt="prev">
-    //             </div>
-    //             <span id="current">${formanNum(id+1)}</span>
-    //             /
-    //             <span id="total">${formanNum(slideArr.length)}</span>
-    //             <div class="offer__slider-next">
-    //                 <img src="icons/right.svg" alt="next">
-    //             </div>
-    //     `;
-    // }
-    // showSlide(id);
-    // counter.addEventListener('click', (e) => {
-    //     if(e.target.classList.contains('offer__slider-prev')){
-    //         id--;
-    //         if (id < 0){
-    //             id =  slideArr.length-1;
-    //         }
-    //         showSlide(id);
-    //     }
-    //     if(e.target.classList.contains('offer__slider-next')){
-    //         id++;
-    //         if (id > slideArr.length-1){
-    //             id =  0;
-    //         }
-    //         showSlide(id);
-    //     }
-    // });
 
     const slides = document.querySelectorAll(slide),
           slider = document.querySelector(container),
@@ -183,45 +127,6 @@ function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCo
             currDotsFunc();
         });   
     });
-
-    // showSlides(slideIndex);
-
-    // if (slides.length < 10) {
-    //     total.textContent = `0${slides.length}`;
-    // } else {
-    //     total.textContent = slides.length;
-    // }
-
-
-    // function showSlides(n) {
-    //     if (n > slides.length){
-    //         slideIndex = 1;
-    //     }
-    //     if (n < 1){
-    //         slideIndex = slides.length;
-    //     }
-
-    //     slides.forEach(item => item.style.display = 'none');
-
-    //     slides[slideIndex - 1].style.display = 'block';
-
-    //     if (slideIndex < 10) {
-    //         current.textContent = `0${slideIndex}`;
-    //     } else {
-    //         total.textContent = slideIndex;
-    //     }
-    // }
-    
-    // function plusSlides(n) {
-    //     showSlides(slideIndex += n);
-    // }
-
-    // prev.addEventListener('click', () => {
-    //     plusSlides(-1);
-    // });
-    // next.addEventListener('click', () => {
-    //     plusSlides(1);
-    // });
 }
 
 export default slider;
